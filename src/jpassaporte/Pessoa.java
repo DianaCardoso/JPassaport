@@ -1,5 +1,13 @@
+/*TRABALHO DE PROGRAMAÇÃO ORIENTADA A OBJETO
+* DATA 03/10/2018
+* DIANA MACENA CARDOSO DOS SANTOS
+* PUCPR
+* PROFESSOR: EMERSON CABRERA PARAISO
+*/
+
 package jpassaporte;
 
+//CLASSE DE PESSOA PARA ATRIBUIR NUMA DATA
 public class Pessoa {
     private String nome;
     private int id;
@@ -8,7 +16,7 @@ public class Pessoa {
         setNome(_nome);
         setId(_id);
     }
-    
+
     public String getNome(){
         return nome;
     }

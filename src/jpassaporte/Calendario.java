@@ -1,6 +1,14 @@
+/*TRABALHO DE PROGRAMAÇÃO ORIENTADA A OBJETO
+* DATA 03/10/2018
+* DIANA MACENA CARDOSO DOS SANTOS
+* PUCPR
+* PROFESSOR: EMERSON CABRERA PARAISO
+*/
+
 package jpassaporte;
 import java.util.ArrayList;
 
+//CLASSE DE CALENDÁRIO PARA PODER COLOCAR O AGENDAMENTO DENTRO DO ARRAYLIST E CADA ELEMENTO SE TORNAR UM CAMPO NO ARRAY
 public class Calendario {
     private ArrayList<Agendamento> listaAgendamento;
     
@@ -56,6 +64,7 @@ public class Calendario {
     
     public void getCarregar(){}
     
+    //FUNÇÕES PARA VERIFICAR SE O AGENDAMENTO ESTA SOBREPONTO ALGUMA DATA EXISTENTE NA HORA DE CRIAR AGENDAMENTO
     public boolean validarAgendamento(Agendamento _agendamento){
         DataHora dataTmp = _agendamento.getDataHoraCompleto();
         DataHora horaTmp = _agendamento.getDataHoraCompleto();
@@ -80,10 +89,12 @@ public class Calendario {
             }else if((horaFinal <= horaInicialA) || (horaInicial >= horaFinalA)){
                     return true;
             }else{
+                
                 return false;
             }
             
         }//FIM DO FOR
+        System.out.println("*********Data já criada, por favor escolha novamente*************");
         return false;
     }//TESTE É O _AGENDAMENTO // LISTA É O _A
 }

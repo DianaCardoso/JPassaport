@@ -1,3 +1,10 @@
+/*TRABALHO DE PROGRAMAÇÃO ORIENTADA A OBJETO
+* DATA 03/10/2018
+* DIANA MACENA CARDOSO DOS SANTOS
+* PUCPR
+* PROFESSOR: EMERSON CABRERA PARAISO
+*/
+
 package jpassaporte;
 
 import java.util.Calendar;
@@ -5,6 +12,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
+
+//CLASSE DE DATAHORA PARA COMPOR O DIA/MES/ANO HORA/MINUTO
 public class DataHora {
     private int dia, mes, ano, hora, minuto;
     
@@ -20,6 +29,7 @@ public class DataHora {
         inicializarDataHora();
     }
     
+    //INICIALIZA SEMPRE COM 0
     public void inicializarDataHora(){
         dia = 0;
         mes = 0;
@@ -41,6 +51,7 @@ public class DataHora {
     public int getDia(){ 
         return dia; 
     }
+    //VALIDA E ATRIBUI DIA ENTRE OS DIAS VÁLIDOS DO MES
     public boolean setDia(int _dia){
         if(_dia >= 1 && _dia <= 31){
             dia = _dia;
@@ -53,6 +64,7 @@ public class DataHora {
     public int getMes(){ 
         return mes; 
     }
+    //VALIDA E ATRIBUI DIA ENTRE OS MESES VÁLIDOS DO ANO
     public boolean setMes(int _mes){
         if(_mes >= 1 && _mes <= 12){
             mes = _mes;
@@ -77,6 +89,7 @@ public class DataHora {
     public int getHora(){
         return hora;
     }
+    //VALIDA E ATRIBUI HORA ENTRE AS HORAS VÁLIDOS DO DIA
     public boolean setHora(int _hora) {
         if(_hora >= 0 && _hora <=23){
             hora = _hora;
@@ -89,6 +102,7 @@ public class DataHora {
     public int getMinuto(){
         return minuto;
     }
+    //VALIDA E ATRIBUI MINUTO ENTRE OS MINUTOS VÁLIDOS DA HORA
     public boolean setMinuto(int _minuto) {
         if(_minuto >= 0 && _minuto <=59){
             minuto = _minuto;
@@ -98,6 +112,7 @@ public class DataHora {
         }
     }
     
+    //CRIA STRING COM A DATA E HORA FORMATADA
     public String getDataHoraFormatado(){
         String retorno = "";
         retorno+=dia;
@@ -112,6 +127,7 @@ public class DataHora {
         return retorno;
     }
     
+    //VERIFICA SE A DATA CRIADA É MAIOR QUE A DATA DO DIA ATUAL
     public boolean isAfterToday(){
         Calendar c = Calendar.getInstance(Locale.getDefault());
         int Today = (c.get(Calendar.YEAR)* 10000) + ((c.get(Calendar.MONTH )+1) * 100) + (c.get(Calendar.DAY_OF_MONTH));
@@ -119,7 +135,6 @@ public class DataHora {
         if (dataTmp > Today) {
             return true;
             
-            //PARAMOS AQUI O//
         }else if(Today == dataTmp ){
             //Comparar Horario
             if(hora > c.get(Calendar.HOUR_OF_DAY)){
@@ -138,5 +153,4 @@ public class DataHora {
             return false;
         }
     }
-
 }

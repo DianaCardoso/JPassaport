@@ -1,7 +1,17 @@
+/*TRABALHO DE PROGRAMAÇÃO ORIENTADA A OBJETO
+* DATA 03/10/2018
+* DIANA MACENA CARDOSO DOS SANTOS
+* PUCPR
+* PROFESSOR: EMERSON CABRERA PARAISO
+*/
+
 package jpassaporte;
 
 import java.util.Scanner;
 
+//CLASSE PARA PERGUNTAS E RESPOSTAS FEITAS DURANTE O PROGRAMA
+//SERVE PARA VALIDAR SE A PERGUNTA É DO TIPO DATAHORA, DO TIPO NUMERO E DO TIPO DADOS
+//JÁ LÊ O TECLADO E RETORNA COM OS VALORES DIGITADOS
 public class PerguntaUsuario {
      
     public int[] PerguntarDataHora(String _pergunta){
@@ -25,17 +35,16 @@ public class PerguntaUsuario {
                         break;
                     
                     }catch (NumberFormatException e){ // Catch para coisas digitadas que não são numeros
-                        System.out.println("alguma coisa aí não é um número");
+                        System.out.println("Alguma coisa aí não é um número");
                         resposta= null;
                     }
                     catch(IndexOutOfBoundsException n){ // Quando é digitado fora do formato padrão
-                        System.out.println("Seu imbecil, Usa o formato que eu estou pedindo...");
+                        System.out.println("Formato inválido, por favor digitar corretamente...");
                         resposta= null;
                     }
                 }
             }
         }
-        
         return respostaFormatada;
     }
     
@@ -71,7 +80,7 @@ public class PerguntaUsuario {
                         respostaNumero = Integer.parseInt(tmp);
                         break;
                     }catch(NumberFormatException e){
-                        System.out.println("Seu imbecil, deixa eu repetir a bosta da pergunta...");
+                        System.out.println("Inválido, por favor digite novamente...");
                         resposta= null;
                     }
                     

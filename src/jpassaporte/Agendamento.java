@@ -1,5 +1,13 @@
+/*TRABALHO DE PROGRAMAÇÃO ORIENTADA A OBJETO
+* DATA 03/10/2018
+* DIANA MACENA CARDOSO DOS SANTOS
+* PUCPR
+* PROFESSOR: EMERSON CABRERA PARAISO
+*/
+
 package jpassaporte;
 
+//CLASSE DE AGENDAMENTO ONDE PEGA O DADO DA PESSOA, A DATA E HORA, A DURAÇÃO E O NOME DO PROJETO
 public class Agendamento { 
     private String tarefa;
     private Pessoa pessoa;
